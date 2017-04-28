@@ -9,5 +9,5 @@ class PubMed(Entrez):
 
     def CountPaper(self, term):
         # cont papers mach with the term
-        PMtree = super(PubMed, self).QuickSearch(term)
+        PMtree = self.QuickSearch(term)
         return int(PMtree.find("Count").text)
